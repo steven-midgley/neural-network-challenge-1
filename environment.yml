@@ -4,8 +4,12 @@ channels:
   - defaults
   - apple
 dependencies:
-  - python
-  - ipykernel
+  - python=3.10
   - pandas
-  - tensorflow
+  - tensorflow>=2.13
   - scikit-learn
+  - ipykernel
+  - pip
+  - pip:
+      - tensorflow-macos
+      - tensorflow-metal

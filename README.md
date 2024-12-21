@@ -1,8 +1,11 @@
 ```bash
-conda deactivate
-conda deactivate
+echo '\nDeactivating all active conda environments\n\n'
+conda deactivate 2>/dev/null || true
+echo '\nRemoving "neural_network" environment\n\n'
 conda remove --name neural_network --all -y
+echo '\nRecreate "neural_network" environment\n\n'
 conda env create -f environment.yml -y
+echo '\nActivate "neural_network" environment\n\n'
 conda activate neural_network
 ```
 
